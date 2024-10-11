@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const getMovies = createAsyncThunk("movieslice/getMovies", async () => {
 
-    const response = await fetch("http://localhost:3000/movies");
+    const response = await fetch("http://localhost:4000/movies");
     const data = await response.json();
     console.log("Fetched data:", data);
     return data;

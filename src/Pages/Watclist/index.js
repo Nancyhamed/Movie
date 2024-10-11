@@ -7,7 +7,7 @@ export default function Watchlist() {
 
     const watchlist = useSelector((state) => state.watchlist);
     const dispatch = useDispatch();
-    console.log(watchlist);
+    // console.log(watchlist);
 
     const handleDelete = (movie) => {
         dispatch(deleteFromWatchlist(movie));
@@ -15,10 +15,10 @@ export default function Watchlist() {
 
     const [filter, setFilter] = useState('all');
     const filteredWatchlist = watchlist.filter(item => {
-        console.log(item.media_type);
+        console.log(item.type);
         if (filter === 'all') {
             return true;
-        } else { return item.media_type === filter }
+        } else { return item.type === filter }
     });
 
     if (!Array.isArray(watchlist) || watchlist.length === 0) {
@@ -32,7 +32,7 @@ export default function Watchlist() {
             <div className="mb-3">
                 <button className={`btn ${filter === 'all' ? 'btn-danger' : 'btn-outline-danger'} me-2`} onClick={() => { setFilter('all') }}>All</button>
                 <button className={`btn ${filter === 'movie' ? 'btn-danger' : 'btn-outline-danger'} me-2`} onClick={() => setFilter('movie')}>Movies</button>
-                <button className={`btn ${filter === 'tv' ? 'btn-danger' : 'btn-outline-danger'} `} onClick={() => setFilter('tv')}>Tv</button>
+                <button className={`btn ${filter === 'series' ? 'btn-danger' : 'btn-outline-danger'} `} onClick={() => setFilter('series')}>Tv</button>
             </div>
 
             {filteredWatchlist.map((item) => (
@@ -64,18 +64,12 @@ export default function Watchlist() {
                                 </div>
                                 <p style={{ color: ' hsl(201, 51%, 45%)', fontSize: '14px', fontWeight: 'bold' }}>{item.release_date
                                 }</p>
-
-
-
-
-                                <span className="tv" >{item.media_type === 'movie' ? 'Movie' : 'TV Series'}</span>
+                                <span className="tv" >{item.type === 'movie' ? 'Movie' : 'TV Series'}</span>
                                 <p className="card-text mt-3" style={{ fontSize: '14px' }}>
                                     {item.overview}
                                 </p>
                             </div>
                             <div>
-
-
                             </div>
                         </div>
 

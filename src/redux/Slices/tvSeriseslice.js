@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 export const getSeries = createAsyncThunk("tvSeriseslice/getSeries", async () => {
 
-    const response = await fetch("http://localhost:3000/series");
+    const response = await fetch("http://localhost:4000/series");
     const data = await response.json();
     console.log("Fetched data:", data);
     return data;
