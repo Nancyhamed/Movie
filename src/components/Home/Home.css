@@ -1,0 +1,60 @@
+body{
+    background-color: #080F28;
+}
+h2{
+    font-family: "Gowun Batang", serif;
+    color: #0BC3BB;
+    margin-bottom: 20px;
+}
+h5{
+    margin-top: 10px;
+    color: aliceblue;
+}
+.card{
+    background-color: #201f1f;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    transition-duration: 1s;
+    position: relative;
+    
+}
+.card .bookmark{
+    position: absolute;
+    bottom:  15px;
+    right: 10px;
+    color: yellow;
+    font-size: 25px;
+}
+.card img{
+    width: 100%;
+}
+.rate i{
+    color: yellow;
+    margin-right: 15px;
+}
+.card:hover{
+    transform: scale(1.1);
+    opacity: .7;
+    cursor: pointer;
+}
+.rate p{
+    color: aliceblue;
+}
+.rate{
+    display: flex;
+}
+ul {
+    list-style: none;
+}
+ul li a{
+    text-decoration: none;
+    color: #ebeae5;
+    font-size: 25px;
+    margin-bottom: 25px;
+    transition-duration: .5s;
+}
+ul li a:hover{
+    transform: scale(1.5);
+    color: rgb(172, 172, 13);
+}
+/* */
