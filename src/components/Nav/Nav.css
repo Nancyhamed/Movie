@@ -1,0 +1,48 @@
+nav{
+    background-color: #0e1136;
+    height: 13vh;
+    display: flex;
+    justify-content:space-between;
+
+}
+.navhover{
+    transition-duration: .5s;
+}
+.navhover:hover{
+color: rgb(133, 20, 20);
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+}
+.container-fluid{
+    margin-left: 200px;
+}
+.logodiv
+{
+    width: 200px;
+    height: 30px;
+    margin-right: 30px;
+    margin-left: 20px;
+    transform: translateY(-22px);
+}
+.navlink{
+    font-size: 20px;
+    margin-right: 30px;
+    color: aliceblue;
+}
+.btns .btn{
+    background-color: rgb(142, 25, 25);
+    color: aliceblue;
+    font-size: 17px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+.btnlink{
+    text-decoration: none;
+    color: aliceblue;
+}
