@@ -1,0 +1,15 @@
+.card-text{
+    color: rgb(199, 156, 97);
+    font-size: 20px;
+}
+.card-content {
+    color: #888;
+}
+.card-body{
+    transition: all .2s ease-in-out;
+}
+.card-body:hover{
+    box-shadow: 0px 0px 7px rgba(225, 225, 225, 0.6);
+    cursor: pointer;
+    border-radius: 8px;
+}
