@@ -47,7 +47,7 @@ export default function Home() {
                 <h2 id='top' className='mb-5 title'>Top Movies</h2>
                 <div className="row mb-5">
                     {top.map((m)=>
-                    <div className="card col-md-3" key={m.id}>
+                    <div className="card col-md-3 col-sm-8 col-10" key={m.id}>
                     <i className="fa-solid fa-plus bookmark"></i>
                     <img src={`https://image.tmdb.org/t/p/w500`+m.poster_path} alt="" className=''/>
                     <h5>{m.title}</h5>
@@ -63,7 +63,7 @@ export default function Home() {
                 <h2  className='mb-5 mt-5 title' id='popular'>Popular</h2>
                 <div className="row mt-5">
                     {movies.map((m)=>
-                    <div className="card col-md-3" key={m.id}>
+                    <div className="card col-md-3 col-sm-8 col-10" key={m.id}>
                         <i className="fa-solid fa-plus bookmark"></i>
                         <img src={`https://image.tmdb.org/t/p/w500`+m.poster_path} alt="" className=''/>
                         <h5>{m.title}</h5>
