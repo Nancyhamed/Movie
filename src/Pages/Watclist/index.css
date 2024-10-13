@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: hsl(231, 28%, 14%) !important;
+    color: white !important;
+}
+
+
+
+.tv {
+    background-color: hsl(201, 51%, 45%);
+    width: 80px;
+    padding-left: 8px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+
+}
+
+.deletebutton {
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.del:hover {
+    fill: red;
+}
+
+
+
+.con {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card_bg {
+    background-color: hsl(230, 30%, 16%);
+    border-radius: 5px;
+    color: white;
+}
