@@ -32,7 +32,7 @@ export default function Nav({setResults}) {
 
     return (
         <>
-            <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-between">
+            <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-between shada">
                 <div className="container">
                     <div className="logodiv">
                         <img src={logo} alt="" className='w-100' />
@@ -44,16 +44,16 @@ export default function Nav({setResults}) {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav me-auto mb-2 mb-lg-0 mt-3 navul">
                                 <li className="nav-item">
-                                    <Link className="nav-link navlink" aria-current="page" to="/">Home</Link>
+                                    <Link className="nav-link navlink navhover" aria-current="page" to="/">Home</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link navlink" to="movies">Movies</Link>
+                                    <Link className="nav-link navlink navhover" to="movies">Movies</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link navlink" to="series">Series</Link>
+                                    <Link className="nav-link navlink navhover" to="series">Series</Link>
                                 </li>
                                 <li className="nav-item">
-                                    <Link className="nav-link navlink" to="watchlist">Watch List</Link>
+                                    <Link className="nav-link navlink navhover" to="watchlist">Watch List</Link>
                                 </li>
                             </ul>
                             <form className="d-flex">
@@ -67,8 +67,8 @@ export default function Nav({setResults}) {
                                 />
                             </form>
                             <div className="btns">
-                                <button className='btn'>Login</button>
-                                <button className='btn'>Sign Up</button>
+                                <button className='btn'><Link to="login" className='btnlink'>Login</Link></button>
+                                <button className='btn'><Link to="signup" className='btnlink'>Sign Up</Link></button>
                             </div>
                         </div>
                     </div>

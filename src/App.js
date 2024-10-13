@@ -8,6 +8,8 @@ import Login from './components/Login/Login';
 import Register from './components/Register/Register';
 import Series from './components/Series/Series';
 import Moviedetails from './components/Moviedetails/Moviedetails';
+import SignUp from './components/SignUp/SignUp';
+import About from './components/About/About';
 
 
 export default function App() 
@@ -23,6 +25,9 @@ export default function App()
       {path:'login',element:<Login/>},
       {path:'register',element:<Register/>},
       {path:'series',element:<Series/>},
+      {path:'login',element:<Login/>},
+      {path:'signup',element:<SignUp/>},
+      {path:'about',element:<About/>}
     ]
   }])
 
@@ -34,6 +39,14 @@ export default function App()
     </>
   )
 }
+
+
+
+
+
+
+
+
 
 
 

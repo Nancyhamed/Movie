@@ -1,11 +1,12 @@
 
-
-
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import MovieSlider from '../MovieSlider/MoviesSlider'
+import Upcoming from'../upComing/Upcoming'
 import "./Home.css"
 import SeriesSlider from '../SeriesSlider/SeriesSlider'
+import img from './inner.jpg'
+import { Link } from 'react-router-dom'
 export default function Home() {
 
     let [movies,setmovies]=useState([])
@@ -34,15 +35,16 @@ export default function Home() {
         <div class="container">
             <div className="row">
                 <div className="col-2">
-                <h2>Generies</h2>
+                <h2 className='Generies'>Generies</h2>
                 <ul>
                     <li><a href="#top">Top</a></li>
                     <li><a href="#popular">Popular</a></li>
+                    <li><a href="#UpComing">Up Coming</a></li>
                     <li><a href="#series">TV series</a></li>
                 </ul>
                 </div>
                 <div className="col-10">
-                <h2 id='top' className='mb-5'>Top Movies</h2>
+                <h2 id='top' className='mb-5 title'>Top Movies</h2>
                 <div className="row mb-5">
                     {top.map((m)=>
                     <div className="card col-md-3" key={m.id}>
@@ -56,8 +58,10 @@ export default function Home() {
                 </div>
                     )}
                 </div>
+                <h2  className='mb-5 title' id='UpComing'>Up Coming</h2>
+                <Upcoming/>
+                <h2  className='mb-5 mt-5 title'>Popular</h2>
                 <div className="row mt-5">
-                    <h2 id='popular'>Popular</h2>
                     {movies.map((m)=>
                     <div className="card col-md-3" key={m.id}>
                         <i className="fa-solid fa-plus bookmark"></i>
@@ -70,8 +74,19 @@ export default function Home() {
                     </div>
                     )}
                 </div>
-                <h2 className='mt-5' id='series'>TV series</h2>
+                <h2 className='mt-5 title' id='series'>TV series</h2>
                 <SeriesSlider/>
+                <div className="toAbout">
+                    <div className="aboutimg">
+                    <img src={img} alt="" />
+                    </div>
+                    <div className="text">
+                        <h3 className='abouttitle'>Know More About us ?</h3>
+                        <p>Movie Night is one if biggest Websites to reccomend you the Trending Movies, Quibusdam voluptate provident voluptatibus eligendi aliquam blanditiis?</p>
+                        <p>To Know more About us and be one of our family , following the trending amovies , you can click here </p>
+                        <button className='btn'><Link to="about" className='btnlink'>About</Link></button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>        
