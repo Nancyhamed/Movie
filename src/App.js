@@ -1,3 +1,10 @@
+import './App.css';
+import { BrowserRouter , Routes ,Route   } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Series from './Pages/Series';
+import TvDetails from './Pages/TvDetails';
+import About from './Pages/About';
+
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
@@ -32,12 +39,22 @@ export default function App()
   }])
 
   return (
+    <div className="App">
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Series/>} />
+          <Route path="/series/:series_id" element={<TvDetails />} />
+          {/* <Route path='/' element={ <About/> } /> */}
+        </Routes>
+      </BrowserRouter>
+
+    </div>
+  );
     <>
       <div className='App'>
         <RouterProvider router={routes}></RouterProvider>
       </div>
     </>
-  )
 }
 
 
