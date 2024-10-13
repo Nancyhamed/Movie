@@ -1,0 +1,38 @@
+.footer{
+    padding: 10px;
+    background-color: #0e1136;
+    height: 30vh;
+    margin-top: 50px;
+}
+.footertxt{
+    color: aliceblue;
+    text-align: center;
+}
+.footertxt2{
+    font-family: "Edu AU VIC WA NT Guides", cursive;
+    text-align: center;
+    color: aliceblue;
+}
+.footertxt2 span{
+    
+    color: rgb(142, 25, 25);
+}
+.icons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 30px;
+}
+.icons i{
+    font-size: 30px;
+    margin-right: 50px;
+    color: rgb(171, 171, 24);
+    transition-duration: 1s;
+    cursor: pointer;
+}
+.icons i:hover{
+    color: rgb(142, 25, 25);
+    transform: scale(1.2);
+}
