@@ -1,0 +1,33 @@
+.sec{
+    margin-bottom: 40px;
+}
+.img-container{
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.img-container img{
+    width: 100%;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.4);
+    transition: all .8s;
+}
+.img-container img:hover{
+    transform: scale(1.1);
+    
+}
+.about-content h2 {
+    font-weight: 550;
+    font-family: fangsong;
+}
+
+.about-content h5{
+    color: rgb(199, 156, 97);
+    font-size: 18px;
+    font-family: fangsong;
+    font-style: italic;
+}
+
+.about-content p{
+    font-size: 13px;
+    color: #888;
+}
