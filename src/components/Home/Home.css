@@ -107,3 +107,25 @@ height: 300px;
 .abouttitle{
     color: #42bcbc;
 }
+
+/*Responsive Code*/
+
+@media(max-width:600px)
+{   
+    .title{
+        width: 200px;
+        margin-left: 50px;
+    }
+    .title:hover{
+        width: 300px;
+    }
+    ul li a{
+        font-size: 15px;
+    }
+    .toAbout .text{
+        width: 200px;
+    }
+    .toAbout{
+        font-size: 10px;
+    }
+}
