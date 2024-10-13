@@ -60,7 +60,7 @@ export default function Home() {
                 </div>
                 <h2  className='mb-5 title' id='UpComing'>Up Coming</h2>
                 <Upcoming/>
-                <h2  className='mb-5 mt-5 title'>Popular</h2>
+                <h2  className='mb-5 mt-5 title' id='popular'>Popular</h2>
                 <div className="row mt-5">
                     {movies.map((m)=>
                     <div className="card col-md-3" key={m.id}>

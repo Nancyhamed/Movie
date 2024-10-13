@@ -2,7 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './components/Home/Home';
-import Movies from './components/Movies/Movies';
+import Movies from './components/Movies/Movies.jsx';
 import WatchList from './components/WatchList/WatchList';
 import Login from './components/Login/Login';
 import Register from './components/Register/Register';
