@@ -8,6 +8,7 @@ export default function Aboutcontent() {
         <div className="row g-1">
           <div className="col-md-7 text-start px-5">
             <div className="about-content">
+              <p>Hello</p>
               <h2>About Us</h2>
               <h5>Welcome To our Movies And Tv Series Website</h5>
               <p>
