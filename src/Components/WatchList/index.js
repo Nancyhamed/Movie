@@ -3,7 +3,7 @@ import './index.css';
 import { deleteFromWatchlist } from "../../redux/Slices/watchlistslice";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-export default function Watchlist() {
+export default function WatchList() {
 
     const watchlist = useSelector((state) => state.watchlist);
     const dispatch = useDispatch();
