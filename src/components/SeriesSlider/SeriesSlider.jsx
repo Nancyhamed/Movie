@@ -28,19 +28,20 @@ const AutoPlaySlider = () => {
 
   return (
     <>
-
-        
-        <div className="par mt-5">
+      <div className="par mt-5">
         <Slider {...settings}>
-            {series.map((s) => (
-                <div className="cardd ">
-                <img src={`https://image.tmdb.org/t/p/w500`+s.poster_path} alt="" className='image'/>
-                <h3 className='mt-3 seriesname'>{s.original_name}</h3>
-                </div>
-            ))}
+          {series.map((s) => (
+            <div className="cardd " key={s.id}>
+              <img
+                src={`https://image.tmdb.org/t/p/w500` + s.poster_path}
+                alt=""
+                className="image"
+              />
+              <h3 className="mt-3 seriesname">{s.original_name}</h3>
+            </div>
+          ))}
         </Slider>
-        </div>
-
+      </div>
     </>
   );
 };

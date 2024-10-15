@@ -1,7 +1,8 @@
-body{
+body {
     background-color: #080F28;
 }
-.title{
+
+.title {
     font-family: "Gowun Batang", serif;
     color: #e5e7e7;
     margin-bottom: 20px;
@@ -11,121 +12,146 @@ body{
     border-radius: 10px;
     transition-duration: 1s;
 }
-.title:hover{
+
+.title:hover {
     width: 600px;
 }
-.Generies{
+
+.Generies {
     font-family: "Gowun Batang", serif;
     color: #42bcbc;
     margin-bottom: 20px;
     width: 150px;
 }
-h5{
+
+h5 {
     margin-top: 10px;
     color: aliceblue;
 }
-.card{
+
+.card {
     background-color: #201f1f;
     margin-left: 30px;
     margin-bottom: 30px;
     transition-duration: 1s;
     position: relative;
-    
+
 }
-.card .bookmark{
+
+.card .bookmark {
     position: absolute;
-    bottom:  15px;
+    bottom: 15px;
     right: 10px;
     color: yellow;
     font-size: 25px;
 }
-.card img{
+
+.card img {
     width: 100%;
 }
-.rate i{
+
+.rate i {
     color: yellow;
     margin-right: 15px;
 }
-.card:hover{
+
+.card:hover {
     transform: scale(1.1);
     opacity: .7;
     cursor: pointer;
 }
-.rate p{
+
+.rate p {
     color: aliceblue;
 }
-.rate{
+
+.rate {
     display: flex;
 }
-ul {
+
+.shada {
     list-style: none;
 }
-ul li{
+
+.shada li {
     margin-top: 15px;
 }
-ul li a{
+
+.shada li a {
     text-decoration: none;
     color: #ebeae5;
     font-size: 25px;
     margin-bottom: 25px;
     transition-duration: .5s;
 }
-ul li a:hover{
+
+.shada li a:hover {
     transform: scale(1.5);
     color: rgb(172, 172, 13);
 }
-.toAbout{
+
+.toAbout {
     margin-top: 50px;
     display: flex;
     color: aliceblue;
 }
-.toAbout .text{
+
+.toAbout .text {
     margin-left: 20px;
 }
-.toAbout .aboutimg{
-width: 70%;
-height: 300px;
+
+.toAbout .aboutimg {
+    width: 70%;
+    height: 300px;
 }
-.aboutimg img{
+
+.aboutimg img {
     width: 100%;
     height: 100%;
 }
-.btn{
+
+.btn {
     background-color: rgb(142, 25, 25);
     color: aliceblue;
     font-size: 17px;
     margin-right: 15px;
     margin-top: 20px;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(152, 149, 149);
 }
-.btnlink{
+
+.btnlink {
     text-decoration: none;
     color: aliceblue;
 }
-.abouttitle{
+
+.abouttitle {
     color: #42bcbc;
 }
 
 /*Responsive Code*/
 
-@media(max-width:600px)
-{   
-    .title{
+@media(max-width:600px) {
+    .title {
         width: 200px;
         margin-left: 50px;
     }
-    .title:hover{
+
+    .title:hover {
         width: 300px;
     }
-    ul li a{
+
+    ul li a {
         font-size: 15px;
     }
-    .toAbout .text{
+
+    .toAbout .text {
         width: 200px;
     }
-    .toAbout{
+
+    .toAbout {
         font-size: 10px;
     }
 }

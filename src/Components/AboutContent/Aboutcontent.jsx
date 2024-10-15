@@ -1,14 +1,13 @@
 import React from "react";
 import "./AboutContent.css";
-import about2 from "../../Assets/about2.jpg"
-export default function Aboutcontent() {
+import about2 from "../../Assets/about2.jpg";
+export default function AboutContent() {
   return (
     <div>
       <div className="container ">
         <div className="row g-1">
           <div className="col-md-7 text-start px-5">
             <div className="about-content">
-              <p>Hello</p>
               <h2>About Us</h2>
               <h5>Welcome To our Movies And Tv Series Website</h5>
               <p>
@@ -26,16 +25,14 @@ export default function Aboutcontent() {
                 laboriosam consectetur ea eligendi quibusdam! Numquam dolorum
                 quam explicabo vero!
               </p>
-              
             </div>
           </div>
 
           <div className="col-md-5">
-              <div className="img-container">
-                <img src={about2} alt="about_us" />
-              </div>
+            <div className="img-container">
+              <img src={about2} alt="about_us" />
             </div>
-
+          </div>
         </div>
       </div>
     </div>
