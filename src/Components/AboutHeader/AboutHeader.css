@@ -1,0 +1,26 @@
+.header-section{
+    background-image: url(../../Assets/head.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 60vh;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+}
+
+.header-content h1{
+    font-size: 48px;
+    font-weight: 700;
+    font-family: 'Times New Roman', Times, serif;
+}
+.header-content h5{
+    color: rgb(137, 116, 87) ;
+    font-size: 17px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 550;
+
+}

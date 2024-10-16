@@ -1,5 +1,6 @@
 import React from 'react'
 import './searchClicked.css'
+
 export default function SearchClicked({result}) {
   return (
     <>

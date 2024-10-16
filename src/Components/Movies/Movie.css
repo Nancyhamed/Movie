@@ -1,0 +1,100 @@
+.topContent {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.form-select {
+    width: 20% !important;
+
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.content .card {
+    margin: 20px;
+    border: none;
+    position: relative;
+    height: 498px;
+    background-color: rgb(22, 22, 44);
+    color: white;
+    transition-duration: 1s;
+}
+
+.content .card:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.content .card img {
+    border-radius: 10px;
+    height: 400px;
+}
+
+h2 {
+    padding: 20px;
+}
+
+.up {
+    position: absolute;
+    background-color: black;
+    width: 100%;
+    bottom: 98px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+    opacity: 0;
+    color: white;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.up:hover {
+    opacity: 0.9;
+
+}
+
+
+.backdrop {
+    position: relative;
+
+}
+
+.details-drop {
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.730);
+    height: 100vh;
+}
+
+.poster {
+    position: absolute;
+    top: 50px;
+    left: 40px;
+    display: flex;
+    color: white;
+
+}
+
+.poster img {
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px gray;
+    width: 80%
+}
+
+.info {
+    margin: 50px;
+}
+
+.info p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+ul {
+    display: flex;
+}
