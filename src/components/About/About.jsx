@@ -1,13 +1,14 @@
 import React from "react";
 import AboutHeader from "../AboutHeader/AboutHeader";
-import AboutContent from "../AboutContent/AboutContent";
+// import Aboutcontent from "../AboutContent/Aboutcontent";
+import Aboutcontent from '../AboutContent/Aboutcontent';
 import AboutLaseSec from "../AboutLastSec/AboutLaseSec";
 
 export default function About() {
   return (
     <div>
       <AboutHeader />
-      <AboutContent />
+      <Aboutcontent />
       <AboutLaseSec />
     </div>
   );

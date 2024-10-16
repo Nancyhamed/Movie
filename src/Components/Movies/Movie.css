@@ -1,8 +1,8 @@
-.topContent {
+/* .topContent {
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
-    margin-top: 100px;
+    margin-top: 500px;
 }
 
 .form-select {
@@ -39,7 +39,7 @@
 h2 {
     padding: 20px;
 }
-
+*/
 .up {
     position: absolute;
     background-color: black;
@@ -57,7 +57,6 @@ h2 {
     opacity: 0.9;
 
 }
-
 
 .backdrop {
     position: relative;
@@ -83,7 +82,7 @@ h2 {
 .poster img {
     border-radius: 10px;
     box-shadow: 2px 2px 5px gray;
-    width: 80%
+    width: 80%;
 }
 
 .info {
@@ -97,4 +96,25 @@ h2 {
 
 ul {
     display: flex;
+} 
+
+
+body{
+    padding: 20px;
 }
+.topContent{
+    margin-top: 100px;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.details-img{
+        height: 450px;
+        width: auto;
+        object-fit: cover;
+        margin: 20px 0px;
+        border-radius: 15px;
+        align-items: center;
+        justify-content: center;
+        
+    }

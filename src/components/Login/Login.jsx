@@ -6,6 +6,7 @@ import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
+
 const Login = () => {
   const initialValues = { username: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
@@ -71,11 +72,12 @@ const Login = () => {
   };
 
   return (
-    <div className="container  full-height d-flex text-center align-items-center justify-content-center row">
+    <div className="sign_background">
+      <div className="container  full-height d-flex text-center align-items-center justify-content-center row">
       <div className="addUser col-md-6 col-lg-4 ">
         <h3 className="signup-header">
           <FontAwesomeIcon icon={faUser} className="icon" />
-          Sign IN
+          LogIN
         </h3>
 
         <hr />
@@ -102,19 +104,20 @@ const Login = () => {
             />
             <p>{formErrors.password}</p>
             <button type="submit" className="btn ">
-              SIGN IN
+              LOGIN
             </button>
           </div>
         </form>
         <div className="login">
-          <p>Don't have Account? </p>
+          <p className="text-light">Don't have Account? </p>
           <Link to="/" type="submit" className="btn ">
             Sign Up
           </Link>
         </div>
       </div>
     </div>
-  );
+    </div>
+  )
 };
 
 export default Login;

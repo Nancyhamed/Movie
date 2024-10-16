@@ -28,7 +28,7 @@ const AutoPlaySlider = () => {
 
   return (
     <>
-      <div className="par mt-5">
+      <div className=" mt-5">
         <Slider {...settings}>
           {series.map((s) => (
             <div className="cardd " key={s.id}>

@@ -2,21 +2,22 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
-import Series from './components/Series/Series';
-import TvDetails from './components/TvDetails/TvDetails';
-import About from './components/About/About';
+import Series from './Components/Series/Series'
+import TvDetails from './Components/TvDetails/TvDetails'
+import About from './Components/About/About';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import WatchList from './components/WatchList';
+import WatchList from './Components/WatchList/index';
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Layout from './components/Layout/Layout';
-import Home from './components/Home/Home';
-import MovieContent from './components/Movies/MovieContent';
-import Login from './components/Login/Login';
+import Layout from './Components/Layout/Layout';
+import Home from './Components/Home/Home'
+// import MovieContent from './components/Movies/MovieContent';
+import MovieContent from './Components/Movies/MovieContent'
+import Login from './Components/Login/Login';
 // import Register from './components/Register/Register';
-import MovieDetails from './components/Moviedetails/MovieDetails';
-import SignUp from './components/SignUp/SignUp';
+import MovieDetails from './Components/Moviedetails/MovieDetails' ;
+import SignUp from './Components/SignUp/SignUp';
 
 
 
