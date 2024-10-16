@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MovieSlider from "../MovieSlider/MoviesSlider";
+
 import Upcoming from "../upComing/Upcoming";
 import "./Home.css";
 import SeriesSlider from "../SeriesSlider/SeriesSlider";
@@ -75,6 +76,7 @@ export default function Home() {
                 Up Coming
               </h2>
               <Upcoming />
+        
               <h2 className="mb-5 mt-5 title" id="popular">
                 Popular
               </h2>
