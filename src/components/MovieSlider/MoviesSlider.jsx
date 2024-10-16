@@ -47,17 +47,6 @@ const AutoPlaySlider = () => {
           ))
         }
       </Slider>
-        {/* <Slider {...settings}>
-            {movies.map((m) => (
-                <div className="movcardd " key={m.id} >
-                <img src={`https://image.tmdb.org/t/p/w500`+m.backdrop_path} alt="" className='image'/>
-                <div className="cradimg w-25">
-                  <img src={`https://image.tmdb.org/t/p/w500`+m.poster_path} alt="" />
-                </div>
-                <h3 className='mt-3 movname' >{m.title}</h3>
-                </div>
-            ))}
-        </Slider> */}
         </div>
     </>
   );
