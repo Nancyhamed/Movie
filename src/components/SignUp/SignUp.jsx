@@ -70,7 +70,8 @@ const SignUp = () => {
   };
 
   return (
-    <div className="container  full-height d-flex text-center align-items-center justify-content-center row">
+    <div className="sign_background">
+      <div className="container mx-0 full-height d-flex text-center align-items-center justify-content-center row">
       <div className="addUser col-md-4 col-lg-4 ">
         <h3 className="signup-header">
           <FontAwesomeIcon icon={faUser} className="icon" />
@@ -119,12 +120,13 @@ const SignUp = () => {
           </div>
         </form>
         <div className="login">
-          <p>Already have an Account? </p>
+          <p className="text-light">Already have an Account? </p>
           <Link to="/login" className="btn ">
             Login
           </Link>
         </div>
       </div>
+    </div>
     </div>
   );
 };
