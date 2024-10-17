@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 // import "./TvSeries.css";
 import { Link } from "react-router-dom";
-import { RiStarSFill } from "react-icons/ri";
 import { getSeries } from "../../redux/Slices/tvSeriseslice";
 import { useSelector, useDispatch } from "react-redux";
 import { addToWatchlist } from "../../redux/Slices/watchlistslice";

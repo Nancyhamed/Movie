@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from "react";
+
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
@@ -12,6 +13,7 @@ const Login = () => {
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -37,11 +39,31 @@ const Login = () => {
   //     .catch((err) => console.log(err));
   // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-  };
+
+    if (Object.keys(formErrors).length === 0) {
+      try {
+          const response = await axios.get("http://localhost:4000/logIn", {
+            email: formValues.email,
+            password: formValues.password,
+          });
+
+        console.log(response.data);
+        if (response.data && response.data.email) {
+          <Navigate to=" " replace={true} />
+          // Redirect or perform any other action here
+        } else {
+          alert(response.data); // Display error message from server
+        }
+      } catch (error) {
+        console.error(error);
+        alert("Error connecting to the server");
+      }
+    }
+  };
 
   useEffect(() => {
     console.log(formErrors);

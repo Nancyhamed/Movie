@@ -5,9 +5,9 @@ import { useDispatch } from "react-redux";
 function SeriesDetails() {
   const params = useParams();
   const [series, setSeries] = useState({});
- const dispatch = useDispatch;
+ const dispatch = useDispatch();
  const handleAdd = (mo) => {
-   dispatch(handleAdd(mo));
+   dispatch(addToWatchlist(mo));
  };
   function getSeriesDetailes(){
       fetch(`http://localhost:4000/getTvSeries/${params.series_id}`)
@@ -20,7 +20,7 @@ function SeriesDetails() {
     getSeriesDetailes();
   }, [params.series_id]);
 
-  const background = `https://image.tmdb.org/t/p/w200${series.backdrop_path}`;
+  const background = `${series.backdrop_path}`;
 
   return (
     <div>
@@ -38,7 +38,7 @@ function SeriesDetails() {
         >
           <div className="col-md-6 text-center">
             <img
-              src={`https://image.tmdb.org/t/p/w200${series.poster_path}`}
+              src={`${series.poster_path}`}
               className="details-img "
             />
           </div>

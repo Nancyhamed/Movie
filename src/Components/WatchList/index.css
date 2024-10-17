@@ -47,6 +47,6 @@ body {
     border-radius: 5px;
     color: white;
 }
-/* .card2-body:hover{
-    transform: scale(1.00);
-} */
+.card2-body:hover{
+    transform: scale(0);
+}
