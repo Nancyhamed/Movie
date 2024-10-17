@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import { addToWatchlist } from "../../redux/Slices/watchlistslice";
 import { useSelector, useDispatch } from "react-redux";
 import { getMovies, getPopularMovies, getTopRateMovies } from "../../redux/Slices/movieslice";
-//import { getMovies, getPopularMovies,getTopRateMovies } from "../../redux/Slices/movieslice";
+
 
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
 
   const dispatch = useDispatch();
   const { movies, popularMovies, topRatedMovies} = useSelector((state) => state.movies);
-  // const {movies,popularMovies,topRatedMovies}=useSelector((state)=> state.movies);
+
 
   useEffect(() => {
     dispatch(getMovies());
@@ -67,7 +67,8 @@ export default function Home() {
               <div className="row mb-5">
                 {topRatedMovies &&
                   topRatedMovies.map((m) => (
-                    <div className="card col-md-3 col-sm-8 col-10" key={m._id}>
+                    <Link className="card col-md-3 col-sm-8 col-10" to={`/movies/${m._id}`} >
+                      <div  key={m._id}>
                       <i
                         className="fa-solid fa-plus bookmark"
                         onClick={() => handleAdd(m)}
@@ -79,6 +80,7 @@ export default function Home() {
                         <p>{m.vote_average}</p>
                       </div>
                     </div>
+                    </Link>
                   ))}
               </div>
               <h2 className="mb-5 title" id="UpComing">
@@ -91,7 +93,9 @@ export default function Home() {
               <div className="row mt-5">
                 {popularMovies &&
                   popularMovies.map((m) => (
-                    <div className="card col-md-3 col-sm-8 col-10" key={m._id}>
+                    <Link to={`/movies/${m._id}`}
+                    className="card col-md-3 col-sm-8 col-10">
+                      <div key={m._id}>
                       <i
                         className="fa-solid fa-plus bookmark"
                         onClick={() => handleAdd(m)}
@@ -103,6 +107,7 @@ export default function Home() {
                         <p>{m.vote_average}</p>
                       </div>
                     </div>
+                    </Link>
                   ))}
               </div>
               <h2 className="mt-5 title" id="series">

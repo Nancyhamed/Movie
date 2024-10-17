@@ -7,7 +7,7 @@ function MovieDetails() {
     const [movie, setMovie] = useState({})
     const dispatch = useDispatch();
     const handleAdd = (mo) => {
-        dispatch(handleAdd(mo));
+        dispatch(addToWatchlist(mo));
     }
 
     function getMovieDetailes() {
@@ -24,9 +24,9 @@ function MovieDetails() {
         <>
             <div className="backdrop">
                 <div className="details-drop"></div>
-                <img src={`https://image.tmdb.org/t/p/w200${movie.backdrop_path}`} alt="..." style={{ width: "100%", height: "100vh" }} />
+                <img src={`${movie.backdrop_path}`} alt="..." style={{ width: "100%", height: "100vh" }} />
                 <div className="poster">
-                    <img className="details-img" src={`https://image.tmdb.org/t/p/w200${movie.poster_path}`} alt="..." />
+                    <img className="details-img" src={`${movie.poster_path}`} alt="..." />
                     <div className="info">
                         <h1>{movie.title}</h1>
                         <p className="text-light">Release Date: {movie.release_date}</p>
