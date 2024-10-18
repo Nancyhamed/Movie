@@ -1,6 +1,6 @@
 nav {
     background-color: #0e1136;
-    height: 13vh;
+    height: 15vh;
     display: flex;
     justify-content: space-between;
 
@@ -36,6 +36,7 @@ nav {
     margin-left: 20px;
     transform: translateY(-22px);
     margin-top: 50px;
+    margin-bottom: 10px;
     /* background-color: aquamarine; */
 }
 

@@ -1,6 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-const getSeries = createAsyncThunk("tvSeriseslice/getSeries", async () => {
+
+// Fetch all series
+export const getSeries = createAsyncThunk("tvSeriseslice/getSeries", async () => {
+
     try {
         const response = await fetch("http://localhost:4000/series");
         const data = await response.json();
@@ -13,7 +16,9 @@ const getSeries = createAsyncThunk("tvSeriseslice/getSeries", async () => {
 });
 
 // Fetch popular series
-const getPopularSeries = createAsyncThunk("tvSeriseslice/getPopularSeries", async () => {
+
+export const getPopularSeries = createAsyncThunk("tvSeriseslice/getPopularSeries", async () => {
+
     try {
         const response = await fetch("http://localhost:4000/popularseries");
         const data = await response.json();
@@ -26,7 +31,9 @@ const getPopularSeries = createAsyncThunk("tvSeriseslice/getPopularSeries", asyn
 });
 
 // Fetch top-rated series
-const getTopRateSeries = createAsyncThunk("tvSeriseslice/getTopRateSeries", async () => {
+
+export const getTopRateSeries = createAsyncThunk("tvSeriseslice/getTopRateSeries", async () => {
+
     try {
         const response = await fetch("http://localhost:4000/topratedseries");
         const data = await response.json();
@@ -67,7 +74,8 @@ const tvSeriseslice = createSlice({
             })
             .addCase(getPopularSeries.fulfilled, (state, action) => {
                 state.status = 'succeeded';
-                state.popularSerise = action.payload;
+                state.popularSerise = action.payload; 
+
             })
             .addCase(getPopularSeries.rejected, (state, action) => {
                 state.status = 'failed';
@@ -90,9 +98,6 @@ const tvSeriseslice = createSlice({
 });
 
 
+export const { } = tvSeriseslice.actions;
 export default tvSeriseslice.reducer;
-export { getSeries, getPopularSeries, getTopRateSeries };
-
-
-
 

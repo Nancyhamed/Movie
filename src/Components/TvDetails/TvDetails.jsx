@@ -24,27 +24,27 @@ function SeriesDetails() {
 
   return (
     <div>
-      <div className="container-fluid">
+      <div className="container-fluid my-5 mx-0">
         <div
-          className="row "
+          className="row mt-4 "
           style={{
             backgroundImage: `linear-gradient(rgba(0,0,0,0.88), rgba(0,0,0,0.88)) , url(${background}) `,
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
 
-            height: " 90vh",
+            height: " 100vh",
           }}
         >
-          <div className="col-md-6">
+          <div className="col-md-6 text-center">
             <img
               src={`https://image.tmdb.org/t/p/w200${series.poster_path}`}
-              className="details-img"
+              className="details-img "
             />
           </div>
           <div className="col-md-6 text-start px-3 py-5">
             <h1>{series.title}</h1>
-            <p>Release Date: {series.release_date}</p>
+            <p className="text-light" >Release Date: {series.release_date}</p>
             <span style={{ marginRight: "30px", color: "white" }}>
               {" "}
               Rating: {series.vote_average}
@@ -62,10 +62,10 @@ function SeriesDetails() {
                 </ul>
               </div>
             )}
-            <p style={{ marginTop: "30px" }}>{series.overview}</p>
+            <p className="text-light fs-6" style={{ marginTop: "30px" }}>{series.overview}</p>
             <Link
-              className="btn btn-primary"
-              style={{ marginTop: "20px" }}
+              className="btn btn-primary "
+              style={{ marginTop: "20px" , border:"0" }}
               onClick={() => handleAdd(series)}
             >
               Add to watchlist

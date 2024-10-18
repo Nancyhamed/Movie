@@ -69,15 +69,13 @@ h5 {
     display: flex;
 }
 
-.shada {
-    list-style: none;
-}
 
-.shada li {
+
+.side_ul li {
     margin-top: 15px;
 }
 
-.shada li a {
+.side_ul li a {
     text-decoration: none;
     color: #ebeae5;
     font-size: 25px;
@@ -85,7 +83,7 @@ h5 {
     transition-duration: .5s;
 }
 
-.shada li a:hover {
+.side_ul li a:hover {
     transform: scale(1.5);
     color: rgb(172, 172, 13);
 }
@@ -154,4 +152,10 @@ h5 {
     .toAbout {
         font-size: 10px;
     }
+}
+
+.side_ul{
+    display: flex;
+    list-style: none;
+    flex-direction: column;
 }

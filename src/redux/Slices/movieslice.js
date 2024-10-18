@@ -15,7 +15,9 @@ export const getPopularMovies = createAsyncThunk("movieslice/getPopularMovies", 
     try {
         const response = await fetch("http://localhost:4000/popularMovies");
         const data = await response.json();
+
         console.log("Fetched Popular:", data);
+
         return data;
     } catch (error) {
         console.error("Error fetching popular movies:", error.message);
@@ -26,7 +28,10 @@ export const getTopRateMovies = createAsyncThunk("movieslice/getTopRateMovies", 
     try {
         const response = await fetch("http://localhost:4000/topRateMovies");
         const data = await response.json();
+
         console.log("Fetched TopRated:", data);
+
+
         return data;
     } catch (error) {
         console.error("Error fetching top-rated movies:", error.message);
@@ -84,6 +89,6 @@ const movieslice = createSlice({
             });
     },
 });
-
-
+export const { } = movieslice.actions;
 export default movieslice.reducer;
+

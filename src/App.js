@@ -2,17 +2,18 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.js';
-import Series from './components/Series/Series';
-import TvDetails from './components/TvDetails/TvDetails';
+import Series from './components/Series/Series'
+import TvDetails from './components/TvDetails/TvDetails'
 import About from './components/About/About';
 import { Provider } from 'react-redux';
 import { store } from './redux/store';
-import WatchList from './components/WatchList';
+import WatchList from './components/WatchList/index';
 import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
-import Home from './components/Home/Home';
-import MovieContent from './components/Movies/MovieContent';
+import Home from './components/Home/Home'
+// import MovieContent from './components/Movies/MovieContent';
+import MovieContent from './components/Movies/MovieContent'
 import Login from './components/Login/Login';
 // import Register from './components/Register/Register';
 import MovieDetails from './components/Moviedetails/MovieDetails';
