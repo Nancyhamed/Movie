@@ -6,10 +6,18 @@
 }
 
 body {
-    /* background-color: hsl(231, 28%, 14%) !important; */
     color: white !important;
 }
 
+.titleepar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../Assets/head.png);
+    height:40vh;
+    background-position: center;
+    background-size: cover;
+}
 
 
 .tv {
@@ -49,4 +57,14 @@ body {
 }
 .card2-body:hover{
     transform: scale(0);
+}
+
+
+@media(max-width: 768px){
+    .responsivecard{
+        width: 100%;
+    }
+    .responsivecard .imag{
+        width: 100%;
+    }
 }

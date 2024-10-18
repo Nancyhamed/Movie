@@ -3,6 +3,7 @@ import './index.css';
 import { deleteFromWatchlist } from "../../redux/Slices/watchlistslice";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
+import "../AboutHeader/AboutHeader"
 export default function WatchList() {
 
     const watchlist = useSelector((state) => state.watchlist);
@@ -28,7 +29,9 @@ export default function WatchList() {
 
     return (
         <div className="container mt-5">
-            <h1 className='text-center mb-4 title'>Your WatchList</h1><hr className="mb-5 " />
+            <div className="titleepar">
+            <h1 className='text-center  titlee'>Your WatchList</h1><hr className="mb-5 " />
+            </div>
             <div className="mb-3">
                 <button className={`btn ${filter === 'all' ? 'btn-danger' : 'btn-outline-danger'} me-2`} onClick={() => { setFilter('all') }}>All</button>
                 <button className={`btn ${filter === 'movie' ? 'btn-danger' : 'btn-outline-danger'} me-2`} onClick={() => setFilter('movie')}>Movies</button>
@@ -37,13 +40,13 @@ export default function WatchList() {
 
             {filteredWatchlist.map((item) => (
 
-                <div className=" card2-body   border-0 rounded-2 mb-3  shadow" key={item._id} style={{ outline: '0' }}>
+                <div className="   border-0 rounded-2 mb-3  shadow" key={item._id} style={{ outline: '0' }}>
                     <div className="row g-0 card_bg  ">
-                        <div className="col-md-2">
+                        <div className="col-md-2 ">
                             <img
                                 src={item.poster_path}
                                 alt={item.title}
-                                className="img-fluid rounded-start imag"
+                                className="img-fluid rounded-start imag "
                                 style={{
 
                                     height: '220px', width: '160px', objectFit: 'cover'

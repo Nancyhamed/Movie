@@ -114,7 +114,7 @@ export default function Home() {
                 TV series
               </h2>
               <SeriesSlider />
-              <div className="toAbout">
+              <div className="toAbout mb-5">
                 <div className="aboutimg">
                   <img src={img} alt="" />
                 </div>

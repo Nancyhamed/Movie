@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import axios from "axios";
 import "./MovieSlider.css";
+import SearchResult from "../SearchResult/SearchResult";
 
 const AutoPlaySlider = () => {
   const settings = {
@@ -32,6 +33,7 @@ const AutoPlaySlider = () => {
 
   return (
     <>
+    
       <div className="movslider">
         <Slider {...settings} className="slider">
           {movies.map((m) => (

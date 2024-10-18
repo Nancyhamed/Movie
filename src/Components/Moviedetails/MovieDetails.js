@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import { addToWatchlist } from "../../redux/Slices/watchlistslice"
 import { useDispatch } from "react-redux"
+
 function MovieDetails() {
     const params = useParams()
     const [movie, setMovie] = useState({})
@@ -43,7 +44,7 @@ function MovieDetails() {
                             </div>
                         )}
                         <p className="text-light" style={{ marginTop: "30px" }}>{movie.overview}</p>
-                        <button className="btn btn-primary " style={{ marginTop: "20px" , border:0}} onClick={() => handleAdd(movie) }>Add to watchlist</button>
+                        <button className="btn btn-primary bb " style={{ marginTop: "20px" , border:0}} onClick={() => handleAdd(movie) }>Add to watchlist</button>
                     </div>
                 </div>
             </div>
