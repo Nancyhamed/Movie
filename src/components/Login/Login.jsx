@@ -2,14 +2,14 @@
 import React, { useState, useEffect } from "react";
 
 import "./login.css";
-import { Link, useNavigate, Navigate } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 
 const Login = () => {
-  const initialValues = { username: "", email: "", password: "" };
+  const initialValues = {email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
@@ -46,17 +46,21 @@ const Login = () => {
 
     if (Object.keys(formErrors).length === 0) {
       try {
-          const response = await axios.get("http://localhost:4000/logIn", {
+          const response = await axios.post("http://localhost:4000/logIn", {
             email: formValues.email,
             password: formValues.password,
           });
 
         console.log(response.data);
         if (response.data && response.data.email) {
-          <Navigate to=" " replace={true} />
+          navigate("/")
+          console.log("done")
           // Redirect or perform any other action here
         } else {
-          alert(response.data); // Display error message from server
+          alert(response.data);
+          alert("enter valid data");
+          console.log("error")
+           // Display error message from server
         }
       } catch (error) {
         console.error(error);
@@ -75,9 +79,9 @@ const Login = () => {
   const validate = (values) => {
     const errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
-    if (!values.username) {
-      errors.username = "Username is required!";
-    }
+    // if (!values.username) {
+    //   errors.username = "Username is required!";
+    // }
     if (!values.email) {
       errors.email = "Email is required!";
     } else if (!regex.test(values.email)) {
@@ -143,3 +147,4 @@ const Login = () => {
 };
 
 export default Login;
+

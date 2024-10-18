@@ -53,7 +53,7 @@ function MovieContent() {
     }
     return (
         <div>
-            <div className="topContent ">
+            <div className="topContent ms-5">
                 <h1>Discover Movies</h1>
                 <select
                     className="form-select w-25 mx-5"
@@ -67,12 +67,12 @@ function MovieContent() {
                     ))}
                 </select>
             </div>
-            <h2>{genre}</h2>
+            <h2 className="ms-5">{genre}</h2>
             <hr />
             <div className="content row m-0">
                 {movie && movie.length > 0 ? (movie.map((movie) => (
             <Link to={`/movies/${movie._id}`}
-                className="card col-md-3 col-sm-8 col-10"> 
+                className="card col-md-2 col-sm-8 col-10"> 
                     <div  key={movie._id}>
                       <i
                         className="fa-solid fa-plus bookmark"

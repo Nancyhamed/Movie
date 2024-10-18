@@ -54,9 +54,9 @@ export default function Series() {
       <div className="container ">
         <div className="row">
           <div className="col-md-12 d-flex my-5">
-            <h2>Discover Tv Showes</h2>
+            <h2 className="mt-5">Discover Tv Showes</h2>
             <select
-              className="form-select w-25 mx-5"
+              className="form-select w-25 mt-5 ms-3"
               aria-label="Default select example"
               onChange={handleSeriesGenresChange}
             >
@@ -74,7 +74,7 @@ export default function Series() {
           {series && series.length > 0 ? (
             series.map((series) => (
               <Link to={`/series/${series._id}`}
-              className="card col-md-3 col-sm-8 col-10"> 
+              className="card col-md-2 col-sm-8 col-10"> 
                 <div  key={series._id}>
                       <i
                         className="fa-solid fa-plus bookmark"
