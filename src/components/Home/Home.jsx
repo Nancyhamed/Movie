@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import MovieSlider from "../MovieSlider/MoviesSlider";
-
 import Upcoming from "../upComing/Upcoming";
 import "./Home.css";
 import SeriesSlider from "../SeriesSlider/SeriesSlider";
@@ -9,9 +8,11 @@ import img from "./inner.jpg";
 import { Link } from "react-router-dom";
 import { addToWatchlist } from "../../redux/Slices/watchlistslice";
 import { useSelector, useDispatch } from "react-redux";
-import { getMovies, getPopularMovies, getTopRateMovies } from "../../redux/Slices/movieslice";
-//import { getMovies, getPopularMovies,getTopRateMovies } from "../../redux/Slices/movieslice";
-
+import {
+  getMovies,
+  getPopularMovies,
+  getTopRateMovies,
+} from "../../redux/Slices/movieslice";
 
 export default function Home() {
   const handleAdd = (m) => {
@@ -19,25 +20,20 @@ export default function Home() {
   };
 
   const dispatch = useDispatch();
-  const { movies, popularMovies, topRatedMovies} = useSelector((state) => state.movies);
-  // const {movies,popularMovies,topRatedMovies}=useSelector((state)=> state.movies);
+  const { movies, popularMovies, topRatedMovies } = useSelector(
+    (state) => state.movies
+  );
 
   useEffect(() => {
     dispatch(getMovies());
     dispatch(getPopularMovies());
     dispatch(getTopRateMovies());
- },[dispatch]);
+  }, [dispatch]);
 
-  console.log("populaer here",popularMovies);
+  console.log("populaer here", popularMovies);
   console.log("movies here", movies);
-  console.log("top rated :",topRatedMovies)
+  console.log("top rated :", topRatedMovies);
 
-
-  //   function filter(cat) {
-  //     const filteredMovies = movies.filter((movie) => movie.category === cat);
-  //     return filteredMovies;
-  //   }
-  // const[filt,setFelt]=useState([]);
   return (
     <>
       <MovieSlider />
@@ -68,43 +64,53 @@ export default function Home() {
               <div className="row mb-5">
                 {topRatedMovies &&
                   topRatedMovies.map((m) => (
-                    <div className="card col-md-3 col-sm-8 col-10" key={m._id}>
-                      <i
-                        className="fa-solid fa-plus bookmark"
-                        onClick={() => handleAdd(m)}
-                      ></i>
-                      <img src={m.poster_path} alt="" className="" />
-                      <h5>{m.title}</h5>
-                      <div className="rate">
-                        <i className="fa-solid fa-star"></i>
-                        <p>{m.vote_average}</p>
+                    <Link
+                      className="card col-md-3 col-sm-8 col-10"
+                      to={`/movies/${m._id}`}
+                    >
+                      <div key={m._id}>
+                        <i
+                          className="fa-solid fa-plus bookmark"
+                          onClick={() => handleAdd(m)}
+                        ></i>
+                        <img src={m.poster_path} alt="" className="" />
+                        <h5>{m.title}</h5>
+                        <div className="rate">
+                          <i className="fa-solid fa-star"></i>
+                          <p>{m.vote_average}</p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
               </div>
               <h2 className="mb-5 title" id="UpComing">
                 Up Coming
               </h2>
               <Upcoming />
-        
+
               <h2 className="mb-5 mt-5 title" id="popular">
                 Popular
               </h2>
               <div className="row mt-5">
                 {popularMovies &&
                   popularMovies.map((m) => (
-                    <div className="card col-md-3 col-sm-8 col-10" key={m._id}>
-                      <i
-                        className="fa-solid fa-plus bookmark"
-                        onClick={() => handleAdd(m)}
-                      ></i>
-                      <img src={m.poster_path} alt="" className="" />
-                      <h5>{m.title}</h5>
-                      <div className="rate">
-                        <i className="fa-solid fa-star"></i>
-                        <p>{m.vote_average}</p>
+                    <Link
+                      to={`/movies/${m._id}`}
+                      className="card col-md-3 col-sm-8 col-10"
+                    >
+                      <div key={m._id}>
+                        <i
+                          className="fa-solid fa-plus bookmark"
+                          onClick={() => handleAdd(m)}
+                        ></i>
+                        <img src={m.poster_path} alt="" className="" />
+                        <h5>{m.title}</h5>
+                        <div className="rate">
+                          <i className="fa-solid fa-star"></i>
+                          <p>{m.vote_average}</p>
+                        </div>
                       </div>
-                    </div>
+                    </Link>
                   ))}
               </div>
               <h2 className="mt-5 title" id="series">

@@ -6,7 +6,6 @@
 }
 
 body {
-    /* background-color: hsl(231, 28%, 14%) !important; */
     color: white !important;
 }
 
@@ -34,8 +33,6 @@ body {
     fill: red;
 }
 
-
-
 .con {
     display: flex;
     width: 100%;
@@ -47,6 +44,3 @@ body {
     border-radius: 5px;
     color: white;
 }
-/* .card2-body:hover{
-    transform: scale(1.00);
-} */

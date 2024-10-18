@@ -15,7 +15,6 @@ export const getPopularMovies = createAsyncThunk("movieslice/getPopularMovies", 
     try {
         const response = await fetch("http://localhost:4000/popularMovies");
         const data = await response.json();
-
         console.log("Fetched Popular:", data);
 
         return data;

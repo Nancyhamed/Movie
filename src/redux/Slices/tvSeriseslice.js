@@ -35,7 +35,7 @@ export const getPopularSeries = createAsyncThunk("tvSeriseslice/getPopularSeries
 export const getTopRateSeries = createAsyncThunk("tvSeriseslice/getTopRateSeries", async () => {
 
     try {
-        const response = await fetch("http://localhost:4000/topratedseries");
+        const response = await fetch("http://localhost:4000/topRateseries");
         const data = await response.json();
         console.log("Fetched data:", data);
         return data;

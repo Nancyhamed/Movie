@@ -12,10 +12,10 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Layout from './components/Layout/Layout';
 import Home from './components/Home/Home'
-// import MovieContent from './components/Movies/MovieContent';
+
 import MovieContent from './components/Movies/MovieContent'
 import Login from './components/Login/Login';
-// import Register from './components/Register/Register';
+
 import MovieDetails from './components/Moviedetails/MovieDetails';
 import SignUp from './components/SignUp/SignUp';
 
