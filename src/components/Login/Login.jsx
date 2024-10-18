@@ -1,16 +1,19 @@
 
 import React, { useState, useEffect } from "react";
+
 import "./login.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, Navigate } from "react-router-dom";
 import axios from "axios";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
+
 
 const Login = () => {
   const initialValues = { username: "", email: "", password: "" };
   const [formValues, setFormValues] = useState(initialValues);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,11 +39,31 @@ const Login = () => {
   //     .catch((err) => console.log(err));
   // };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormErrors(validate(formValues));
     setIsSubmit(true);
-  };
+
+    if (Object.keys(formErrors).length === 0) {
+      try {
+          const response = await axios.get("http://localhost:4000/logIn", {
+            email: formValues.email,
+            password: formValues.password,
+          });
+
+        console.log(response.data);
+        if (response.data && response.data.email) {
+          <Navigate to=" " replace={true} />
+          // Redirect or perform any other action here
+        } else {
+          alert(response.data); // Display error message from server
+        }
+      } catch (error) {
+        console.error(error);
+        alert("Error connecting to the server");
+      }
+    }
+  };
 
   useEffect(() => {
     console.log(formErrors);
@@ -71,11 +94,12 @@ const Login = () => {
   };
 
   return (
-    <div className="container  full-height d-flex text-center align-items-center justify-content-center row">
+    <div className="sign_background">
+      <div className="container  full-height d-flex text-center align-items-center justify-content-center row">
       <div className="addUser col-md-6 col-lg-4 ">
         <h3 className="signup-header">
           <FontAwesomeIcon icon={faUser} className="icon" />
-          Sign IN
+          LogIN
         </h3>
 
         <hr />
@@ -102,19 +126,20 @@ const Login = () => {
             />
             <p>{formErrors.password}</p>
             <button type="submit" className="btn ">
-              SIGN IN
+              LOGIN
             </button>
           </div>
         </form>
         <div className="login">
-          <p>Don't have Account? </p>
+          <p className="text-light">Don't have Account? </p>
           <Link to="/" type="submit" className="btn ">
             Sign Up
           </Link>
         </div>
       </div>
     </div>
-  );
+    </div>
+  )
 };
 
 export default Login;

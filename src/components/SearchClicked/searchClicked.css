@@ -3,6 +3,7 @@
     font-weight: bold;
     font-size: 20px;
     margin-bottom: 10px;
+    text-decoration: none;
 }
 .searchClicked:hover{
     background-color: rgba(179, 178, 180, 0.3);

@@ -3,7 +3,6 @@
 }
 
 .addUser {
-    background-color: white;
     width: 25%;
     margin: 50px auto;
 
@@ -34,12 +33,12 @@
     margin-top: 10px;
     border-radius: 30px;
     height: 50px;
-    background-color: rgb(103, 229, 229);
-    border-color: rgb(103, 229, 229);
+    background-color:  rgb(133, 20, 20);
+    border-color:  rgb(133, 20, 20); 
 }
 
 .inputGroup button:hover {
-    background-color: rgb(151, 248, 248);
+    /* background-color: rgb(151, 248, 248); */
 }
 
 .login {
@@ -81,13 +80,8 @@ p {
 hr {
 
     background-color: #858080;
-
-}
-
-hr {
     border: none;
     height: 2px;
-
 
 }
 
@@ -96,6 +90,7 @@ hr {
     align-items: center;
     /* Center vertically */
     margin-bottom: 20px;
+   
 }
 
 .icon {
@@ -105,4 +100,19 @@ hr {
     font-size: 1.5rem;
     /* Adjust size */
     /* Adjust opacity for effect */
+}
+.sign_background{
+    width: 100%;
+    height: 100%;
+    background: url("../../Assets/WhatsApp\ Image\ 2024-10-17\ at\ 00.09.15_4bf3893d.jpg") ,
+    linear-gradient(to bottom,
+    rgba(0, 0, 0, .8) 100%,
+    rgba(0, 0, 0, 0.8) 100%);
+    position: relative;
+    z-index: 1; /* Ensure content is above the pseudo-element */
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
 }

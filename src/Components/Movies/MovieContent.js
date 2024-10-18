@@ -4,7 +4,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addToWatchlist } from '../../redux/Slices/watchlistslice';
 
 import { RiStarSFill } from "react-icons/ri";
-import "./Movie.css"
+import "./Movie.css";
 import { Link } from "react-router-dom";
 function MovieContent() {
     const [movie, setMovie] = useState([]);
@@ -53,7 +53,7 @@ function MovieContent() {
     }
     return (
         <div>
-            <div className="topContent">
+            <div className="topContent ">
                 <h1>Discover Movies</h1>
                 <select
                     className="form-select w-25 mx-5"
@@ -69,40 +69,23 @@ function MovieContent() {
             </div>
             <h2>{genre}</h2>
             <hr />
-            <div className="content">
+            <div className="content row m-0">
                 {movie && movie.length > 0 ? (movie.map((movie) => (
-                    <>
-                        <Link
-                            className="btn btn-dark"
-                            to={`/movies/${movie._id}`}
-                            style={{ backgroundColor: "transparent", border: "none" }}
-                        >
-                            <div className="col-lg-4 mb-3 px-4  img-container "></div>
-                            <div
-                                className="card"
-                                key={movie._id}
-                                style={{ width: "17rem" }}
-                            >
-                                <img src={movie.poster_path} alt={movie.title} />
-                                <div className="ovelay-sec">
-                                    <h5>{movie.title}</h5>
-                                    <span style={{ color: "red" }}>
-                                        {movie.release_date}
-                                    </span>
-                                    <p>
-                                        <RiStarSFill /> {movie.vote_average}
-                                    </p>
-                                </div>
-                            </div>
-                            <Link
-                                className="btn btn-primary"
-                                style={{ marginTop: "10px" }}
-                                onClick={() => handleAdd(movie)}
-                            >
-                                Add to watchlist
-                            </Link>
-                        </Link>
-                    </>
+            <Link to={`/movies/${movie._id}`}
+                className="card col-md-3 col-sm-8 col-10"> 
+                    <div  key={movie._id}>
+                      <i
+                        className="fa-solid fa-plus bookmark"
+                        onClick={() => handleAdd(movie)}
+                      ></i>
+                      <img src={movie.poster_path} alt="" className="" />
+                      <h5>{movie.title}</h5>
+                      <div className="rate">
+                        <i className="fa-solid fa-star"></i>
+                        <p>{movie.vote_average}</p>
+                      </div>
+                    </div>
+              </Link>
                 ))) : (<p>No Movies Found...</p>)}
             </div>
         </div>

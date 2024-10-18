@@ -1,37 +1,62 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Nav.css";
 import logo from "./logo3-removebg-preview.png";
+import { getMovies } from '../../redux/Slices/movieslice';
+import { useSelector, useDispatch } from 'react-redux';
+
+
 
 export default function Nav({ setResults }) {
   const [input, setInput] = useState("");
+  const { movies } = useSelector((state) => state.movies);
+  const dispatch = useDispatch()
 
-  const fetchData = (value) => {
-    fetch(
-      "https://api.themoviedb.org/3/movie/popular?api_key=ab84620c25925703ad5485179e1a4a0f"
-    )
-      .then((response) => response.json())
-      .then((json) => {
-        // Accessing the results array
-        const results = json.results.filter((mov) => {
-          return (
-            value &&
-            mov &&
-            mov.title &&
-            mov.title.toLowerCase().includes(value.toLowerCase())
-          );
-        });
-        setResults(results);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
-  };
+  // const fetchData = (value) => {
+  //   fetch(
+  //     "https://api.themoviedb.org/3/movie/popular?api_key=ab84620c25925703ad5485179e1a4a0f"
+  //   )
+  //     .then((response) => response.json())
+  //     .then((json) => {
+  //       // Accessing the results array
+  //       const results = json.results.filter((mov) => {
+  //         return (
+  //           value &&
+  //           mov &&
+  //           mov.title &&
+  //           mov.title.toLowerCase().includes(value.toLowerCase())
+  //         );
+  //       });
+  //       setResults(results);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching data:", error);
+  //     });
+  // };
+
+  const searFilter = (value)=>{
+   const filter= movies.filter((mov)=>{
+      return (
+                  value &&
+                  mov &&
+                  mov.title &&
+                  mov.title.toLowerCase().includes(value.toLowerCase())
+                );
+                
+              })
+              ;setResults(filter);
+           
+    }
+  
+  useEffect(()=>{
+    dispatch(getMovies())
+  },[dispatch])
 
   const handleChange = (value) => {
     setInput(value);
-    fetchData(value);
+    // fetchData(value);
+    searFilter(value)
   };
 
   return (
@@ -112,7 +137,6 @@ export default function Nav({ setResults }) {
     </>
   );
 }
-
 // import React from 'react'
 // import { json, Link } from 'react-router-dom'
 // import 'bootstrap/dist/css/bootstrap.min.css'

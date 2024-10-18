@@ -1,3 +1,6 @@
+body{
+    background-color: #080F28;
+}
 .ovelay-sec{
     position: absolute;
     bottom: 0;
@@ -54,41 +57,7 @@ img{
     object-fit: cover;
     margin: 20px 0px;
     border-radius: 15px;
-}
-
-/* .backdrop{
-    position: relative;
+    align-items: center;
+    justify-content: center;
     
 }
-.details-drop{
-    position:absolute;
-    width:100%;
-    background-color:rgba(0, 0, 0, 0.730);
-    height:100vh;
-}
-.poster{
-    position:absolute;
-    top:50px;
-    left:40px;
-    display:flex;
-    color:white;
-    
-}
-.poster img{
-    border-radius:10px;
-    box-shadow:2px 2px 5px gray;
-    width:80%
-}
-
-.info{
-    margin:50px;
-}
-
-.info p{
-    margin-top:30px ;
-    margin-bottom:30px;
-}
-
-ul {
-    display: flex;
-} */

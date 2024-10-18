@@ -37,7 +37,7 @@ export default function WatchList() {
 
             {filteredWatchlist.map((item) => (
 
-                <div className="card  border-0 rounded-2 mb-3  shadow" key={item._id} style={{ outline: '0' }}>
+                <div className=" card2-body   border-0 rounded-2 mb-3  shadow" key={item._id} style={{ outline: '0' }}>
                     <div className="row g-0 card_bg  ">
                         <div className="col-md-2">
                             <img
@@ -50,7 +50,7 @@ export default function WatchList() {
                                 }} />
                         </div>
 
-                        <div className="col-md-10">
+                        <div className="col-md-10 ">
                             <div className="card-body d-flex flex-column h-200">
                                 <div className="con">
                                     <h5 className="card-title fw-bold">{item.title}</h5>
@@ -65,7 +65,7 @@ export default function WatchList() {
                                 <p style={{ color: ' hsl(201, 51%, 45%)', fontSize: '14px', fontWeight: 'bold' }}>{item.release_date
                                 }</p>
                                 <span className="tv" >{item.type === 'movie' ? 'Movie' : 'TV Series'}</span>
-                                <p className="card-text mt-3" style={{ fontSize: '14px' }}>
+                                <p className="card-text mt-3 " style={{ fontSize: '14px' }}>
                                     {item.overview}
                                 </p>
                             </div>

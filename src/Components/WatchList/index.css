@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: hsl(231, 28%, 14%) !important;
+    /* background-color: hsl(231, 28%, 14%) !important; */
     color: white !important;
 }
 
@@ -43,7 +43,10 @@ body {
 }
 
 .card_bg {
-    background-color: hsl(230, 30%, 16%);
+    background-color: hsl(230, 59%, 14%);
     border-radius: 5px;
     color: white;
+}
+.card2-body:hover{
+    transform: scale(0);
 }

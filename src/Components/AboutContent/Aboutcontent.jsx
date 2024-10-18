@@ -10,7 +10,7 @@ export default function AboutContent() {
             <div className="about-content">
               <h2>About Us</h2>
               <h5>Welcome To our Movies And Tv Series Website</h5>
-              <p>
+              <p >
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
                 eos ut veniam minima, fugiat ullam culpa laudantium, illo
                 veritatis illum provident beatae eum possimus recusandae
